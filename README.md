@@ -1,6 +1,10 @@
 # Sistemas embebidos - Grupo 1
 
-Integrantes:
-Christian Guantay 
+### Integrantes:
+
+Christian Guantay (xxxxx)
+
 Jonathan Cárdenas (99195)
-Solana Caul
+
+Solana Caul (xxxxx)
+
