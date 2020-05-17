@@ -42,8 +42,14 @@ Para acceder a Yakindu buscamos un archivo de extención .sct. Por ejemplo, togg
 
 ![](https://user-images.githubusercontent.com/38143566/82158091-0ebe7f00-985c-11ea-8538-e2b1b9d65aa2.png)
 
+A la izquierda puede verse la región de definición, mientras que a la derecha se encuentra el diagrama en sí. Algunas denominaciones extra se muestran en la siguiente figura.
+
+![](https://www.itemis.com/hubfs/yakindu/statechart-tools/documentation/images/quick_ref_sct_overview.png)
+
+Una característica de gran utilidad de Yakindu es que permite realizar simulaciones de los statechart. Para empezar las simulaciones, lo cual solo es posible cuando no existen errores de sintaxis, existen muchas formas, una de las cuales se muestra en la figura siguiente. Consiste en utilizar el botón de "play" ubicado en el menú superior.
 
 ![](https://user-images.githubusercontent.com/38143566/82161523-db87ea00-9873-11ea-9ebd-d03563d5332f.png)
 
+El agregado del modo de simulación es la ventana de la derecha en la siguiente imagen. En ella puede activarse los eventos y observarse la reacción del sistema a estos estímulos. Los bloques que estén activos tienen un color amarillo, en vez del azul usual.
 
 ![](https://user-images.githubusercontent.com/38143566/82161529-f5293180-9873-11ea-914b-8a713722da68.png)
