@@ -6,7 +6,7 @@ Christian Guantay (98538)
 
 Jonathan Cárdenas (99195)
 
-Solana Caul (xxxxx)
+Solana Caul (93125)
 
 ## Instalación y uso de Yakindu
 
