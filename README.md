@@ -2,11 +2,11 @@
 
 ### Integrantes:
 
-Christian Guantay (xxxxx)
+Christian Guantay (98538)
 
 Jonathan Cárdenas (99195)
 
-Solana Caul (xxxxx)
+Solana Caul (93125)
 
 ## Instalación y uso de Yakindu
 
@@ -38,4 +38,6 @@ En este punto el entorno de desarrollo está instalado y listo para utilizar Yak
 
 ## Introducción a Yakindu
 
-Para acceder a Yakindu buscamos un archivo de extención .sct. Por ejemplo, toggle.sct, que se encuentra en la ruta \firmware_v3-r1.3.0\examples\c\sapi\statecharts\1_toggle\.
+Para acceder a Yakindu buscamos un archivo de extención .sct. Por ejemplo, toggle.sct, que se encuentra en la ruta \firmware_v3-r1.3.0\examples\c\sapi\statecharts\1_toggle\. Si se hace doble clic en el explorador del IDE se abre el statechart
+
+![](https://user-images.githubusercontent.com/38143566/82158091-0ebe7f00-985c-11ea-8538-e2b1b9d65aa2.png)
