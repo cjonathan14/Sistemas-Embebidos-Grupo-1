@@ -20,6 +20,6 @@ El primer paso es la instalación del entorno de desarrollo sobre el cual se eje
 
 Dado que a ningún integrante del grupo le funcionó correctamente Eclipse, utilizamos una alternativa al mismo: MCUXpresso. El mismo puede descargarse del 
 
-!()
+!(https://user-images.githubusercontent.com/38143566/82156304-c9e11b00-9850-11ea-9be5-d2730024a0e0.png)
 
 
