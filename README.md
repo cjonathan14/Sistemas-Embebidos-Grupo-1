@@ -2,7 +2,7 @@
 
 ### Integrantes:
 
-Christian Guantay (xxxxx)
+Christian Guantay (98538)
 
 Jonathan Cárdenas (99195)
 
