@@ -19,3 +19,5 @@ El primer paso es la instalación del entorno de desarrollo sobre el cual se eje
 ### Instalación del MCUXpresso
 
 Dado que a ningún integrante del grupo le funcionó correctamente Eclipse, utilizamos una alternativa al mismo: MCUXpresso. El mismo puede descargarse del 
+
+
