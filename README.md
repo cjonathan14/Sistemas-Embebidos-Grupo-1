@@ -26,7 +26,7 @@ Dado que a ningún integrante del grupo le funcionó correctamente Eclipse, util
 
 El programa Yakindu se utiliza como un plug-in dentro de los entornos de desarrollo. Para instalarlo, debe accederse a "Eclipse Marketplace", dentro del menú "help"
 
-![](https://user-images.githubusercontent.com/38143566/82157230-85f11480-9856-11ea-9a7c-528d3c69abed.png)
+![](https://user-images.githubusercontent.com/38143566/82157653-32cc9100-9859-11ea-9f5d-5ed0402a0862.png)
 
 Allí, debe buscarse "Yakindu" e instalar la opción que se muestra en la figura siguiente
 
