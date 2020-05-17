@@ -41,3 +41,9 @@ En este punto el entorno de desarrollo está instalado y listo para utilizar Yak
 Para acceder a Yakindu buscamos un archivo de extención .sct. Por ejemplo, toggle.sct, que se encuentra en la ruta \firmware_v3-r1.3.0\examples\c\sapi\statecharts\1_toggle\. Si se hace doble clic en el explorador del IDE se abre el statechart
 
 ![](https://user-images.githubusercontent.com/38143566/82158091-0ebe7f00-985c-11ea-8538-e2b1b9d65aa2.png)
+
+
+![](https://user-images.githubusercontent.com/38143566/82161523-db87ea00-9873-11ea-9ebd-d03563d5332f.png)
+
+
+![](https://user-images.githubusercontent.com/38143566/82161529-f5293180-9873-11ea-914b-8a713722da68.png)
