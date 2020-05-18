@@ -2,10 +2,10 @@
 
 ## Enunciado
 
-Implementar (editar,simular y generar el c骴igo) el modelo de control de Panel de Control de un generador de se馻les.
-* Tensi髇: 0 a 10V.
+Implementar (editar,simular y generar el c贸digo) el modelo de control de Panel de Control de un generador de se帽ales.
+* Tensi贸n: 0 a 10V.
 * Frecuencia: 20 a 20.000Hz
-* Formas de se馻l: 3
+* Formas de se帽al: 3
 
 ### PASO 1
 En el primer paso se deben identificar los eventos y las acciones.
@@ -20,8 +20,8 @@ En el primer paso se deben identificar los eventos y las acciones.
 
 * Elegir Forma
 * Elegir Magnitud
-* Incrementar Tensi髇
-* Decrementar Tensi髇
+* Incrementar Tensi贸n
+* Decrementar Tensi贸n
 * Incrementar Frecuencia
 * Decrementar Frecuencia.
 
@@ -36,16 +36,16 @@ En el segundo paso se deben identificar los estados
 * Cuadrada
 * Senoidal
 
-* Tensi髇 
+* Tensi贸n 
 * Frecuencia
 
 ### PASO 4
 
 En el cuarto paso se debe agrupar por concurrencia. Esto significa que posibilita la existencia de tareas independientes. 
-Con lo cual se tienen dos subestados concurrentes, porque se ejecutan en paralelo, uno para seleccionar la **Forma y el otro para 
-seleccionar la **Magnitud.
+Con lo cual se tienen dos subestados concurrentes, porque se ejecutan en paralelo, uno para seleccionar la **Forma** y el otro para 
+seleccionar la **Magnitud**.
 
-## Implentaci髇 en el MCU Express
+## Implentaci贸n en el MCU Express
 
 ![](https://github.com/cjonathan14/Sistemas-Embebidos-Grupo-1/blob/master/panel%20de%20control.png "Diagrama de estados": Panel de Control)
 
