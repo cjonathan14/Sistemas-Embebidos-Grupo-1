@@ -19,15 +19,15 @@ Para complejizar el sistema se agregaron 2 nuevas funcionalidades:
 Dado que se cuenta con 4 sensores, se utilizan 4 eventos, cada uno asociado con la activación del detector.
 
 Sensores de bajada:
-
+´´´
 in event evPersonaArriba // Se detecta una persona arriba que quiere bajar
 in event evPersonaBajo // La persona que estaba arriba ya bajo
-
+´´´
 Sensores de subida:
-
+´´´
 in event evPersonaAbajo // Se detecta una persona abajo que quiere subir
 in event evPersonaSubio // La persona que estaba abajo ya subio
-
+´´´
 
 ## Operaciones
 
