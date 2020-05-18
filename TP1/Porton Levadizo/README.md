@@ -43,7 +43,7 @@ En el segundo paso se deben identificar los estados
 
 ![portonlevadizo](https://user-images.githubusercontent.com/63314732/82165491-9ec7ed00-988b-11ea-807b-3cc37eb26b86.png)
 
- Se comienza en el estado CERRADO, donde la lus roja y luz verde se encuentran apagadas, al igual que el motor. Cuando se produce el evento
+ Se comienza en el estado CERRADO, donde la luz roja y luz verde se encuentran apagadas, al igual que el motor. Cuando se produce el evento
  Remoto, la luz roja comienza a titilar, se enciende la luz verde y pasa al estado ABRIENDO, donde el motor se encuentra en funcionamiento abriendo el porton.
  En este estado, se pueden producir dos eventos. El primero es el evento abrio, donde se produce una transicion al estado ABIERTO, en el cual el motor se apaga y el porton permanece abierto, con la luz roja titilando
  y la luz verde encedida. El otro evento es el remoto, es decir que mientras esta en estado abierto si se produce el evento remoto el porton estará en
