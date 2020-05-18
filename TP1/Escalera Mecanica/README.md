@@ -1,4 +1,4 @@
-#TP1: Escalera mecánica
+# TP1: Escalera mecánica
 
 ## Enunciado
 
