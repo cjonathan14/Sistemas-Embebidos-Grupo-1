@@ -47,9 +47,14 @@ seleccionar la **Magnitud**.
 
 ## Implentación en el MCU Express
 
-![](panel de control.png "Diagrama de estados": Panel de Control)
+![panel de control](https://user-images.githubusercontent.com/63314732/82164149-8654d400-9885-11ea-9e04-62500974567d.png)
 
+En la región de Función, la forma por defecto es la TRIANGULAR. Esta forma se puede ir modificando cada vez 
+que se seleccione el botón para modificar la forma, el cual se encuentra representado por el evForma y se ejecuta a través de la
+opSetForma que recibe una variable de tipo integer, que representa la forma.
 
+En la región Magnitud, se selecciona la magnitud de la tensión y de la frecuencia. Las cuales pueden ir incrementado o decreciendo,
+a partir de los eventos evUp y evDown, respectivamente. Son eventos de llamada porque recepcionan una llamada a una operación. 
 
 
 
