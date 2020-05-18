@@ -47,7 +47,7 @@ seleccionar la **Magnitud**.
 
 ## Implentación en el MCU Express
 
-![](https://github.com/cjonathan14/Sistemas-Embebidos-Grupo-1/blob/master/panel%20de%20control.png "Diagrama de estados": Panel de Control)
+![](panel de control.png "Diagrama de estados": Panel de Control)
 
 
 
