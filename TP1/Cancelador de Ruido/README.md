@@ -7,14 +7,17 @@ El presente proyecto consiste en la implementación de un cancelador activo de r
 \(también conocido como ANC por sus siglas en inglés)\ .
 Para su implementación se usara una placa EDU-CIAA, 2 micrófonos, un parlante y 2 pulsadores para indicar el modo y la señal de inicio.
 
-El dispositivo empieza en un estado de reposo en el que se elige el modo de operación deseado /( puede ser Feedback o Feedforward)/.
-De acuerdo al modo elegido, se activarán los micrófonos correspondientes para la recepcion de la señal deseada.
-La placa EDU-CIAA seguira recibiendo la señal mientras la tension de offset de esta no sea nula.
-Una vez que la tension de offset sea nula se procedera al calculo de la respuesta impulsiva del sistema 
-parlante/microfono. Luego de ser calculada se pasa a la fase de control. En esta fase se implementa un
+El dispositivo empieza en un estado de reposo en el que se elige el modo de operación deseado /( puede ser Feedback o Feedforward)/mediante un pulsador. Una vez que se eligio el modo se utiliza otro pulsador para dar lugar a la señal de inicio y luego prender el LED verde.
+
+De acuerdo al modo elegido, se activarán los micrófonos correspondientes para la recepcion de la señal deseada. 
+La placa EDU-CIAA seguira recibiendo la señal de audio deseada mientras la tension de offset de esta no sea nula. En esta etapa se desactiva el LED verde y el LED amarillo empieza a titilar para indicar que esta procesando la señal de audio.
+Una vez que la tension de offset sea nula se encendera un LED verde para indicar que se proceso la señal con exito y se procedera al calculo de la respuesta impulsiva del sistema 
+parlante/microfono. Durante el calculo de esta respuesta se apagara el LED verde y el LED amarillo empezara a titilar hasta que termine el calculo.
+
+Luego de ser calculada se prende nuevamente el LED verde y se pasa a la fase de control. En esta fase se implementa un
 loop infinito en el que la señal de control es continuamente actualizada y se activa el parlante para transmitir
-esta señal. Este loop infinito solo puede ser detenido mediante una señal de Stop implementada con un pulsador, la cual devuelve al dispositivo a su estado
-original y se cesa de transmitir la señal anti-ruido.
+esta señal y el LED amarillo vuelve a titilar nuevamente. Este loop infinito solo puede ser detenido mediante una señal de Stop implementada con un pulsador, la cual devuelve al dispositivo a su estado
+original, se cesa de transmitir la señal anti-ruido y se prende el LED rojo para indicar que se detuvo el proceso.
 
 Este documento detalla el funcionamiento de este proyecto, acompañado por imágenes para facilitar su comprensión.
 
