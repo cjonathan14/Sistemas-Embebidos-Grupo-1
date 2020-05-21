@@ -3,12 +3,12 @@
 
 ## **Descripción**
 
-El presente proyecto consiste en la implementacion de un cancelador activo de ruido acustico
-\(tambien conocido como ANC por sus siglas en ingles)\ .
-Para su implementacion se usara una placa EDU-CIAA, 2 microfonos, un parlante y 2 pulsador para indicar el modo.
+El presente proyecto consiste en la implementación de un cancelador activo de ruido acústico
+\(también conocido como ANC por sus siglas en inglés)\ .
+Para su implementación se usara una placa EDU-CIAA, 2 micrófonos, un parlante y 2 pulsador para indicar el modo.
 
-El dispositivo empieza en un estado de reposo en el que se elige el modo de operacion deseado /( puede ser Feedback o Feedforward)/.
-De acuerdo al modo elegido, se activiran los microfonos correspondientes para la recepcion de la señal deseada.
+El dispositivo empieza en un estado de reposo en el que se elige el modo de operación deseado /( puede ser Feedback o Feedforward)/.
+De acuerdo al modo elegido, se activarán los micrófonos correspondientes para la recepcion de la señal deseada.
 La placa EDU-CIAA seguira recibiendo la señal mientras la tension de offset de esta no sea nula.
 Una vez que la tension de offset sea nula se procedera al calculo de la respuesta impulsiva del sistema 
 parlante/microfono. Luego de ser calculada se pasa a la fase de control. En esta fase se implementa un
@@ -16,13 +16,13 @@ loop infinito en el que la señal de control es continuamente actualizada y se a
 esta señal. Este loop infinito solo puede ser detenido mediante una señal de Stop implementada con un pulsador, la cual devuelve al dispositivo a su estado
 original y se cesa de transmitir la señal anti-ruido.
 
-Este documento detalla el funcionamiento de este proyecto, acompañado por imagenes para facilitar su comprension.
+Este documento detalla el funcionamiento de este proyecto, acompañado por imágenes para facilitar su comprensión.
 
 ## **Estados**
 
 REPOSO; Estado en el que el dispositivo se inicializa.
 
-INICIALIZACION; Estado en el que el sistema inicializa los perifericos y carga los datos correspondientes a su modo.
+INICIALIZACION; Estado en el que el sistema inicializa los periféricos y carga los datos correspondientes a su modo.
 
 ANALISIS CAMINO SECUNDARIO; Estado en el que se identifica la respuesta impulsiva del sistema mediante generación de ruido blanco.
 
@@ -40,9 +40,9 @@ APAGADO; El LED se encuentra apagado.
 
 ## **Estados Modo**
 
-FEEDBACK; Estado en el que se se habilitan los perifericos correspondientes al modo Feedback.
+FEEDBACK; Estado en el que se se habilitan los periféricos correspondientes al modo Feedback.
 
-FEEDFORWARD; Estado en el que se se habilitan los perifericos correspondientes al modo Feedforward.
+FEEDFORWARD; Estado en el que se se habilitan los periféricos correspondientes al modo Feedforward.
 
 ## **Eventos**
 
@@ -60,13 +60,13 @@ in event evConvergenceFAIL; Evento en el que el algoritmo LMS no converge de man
 
 ## **Operaciones**
 
-operation opManejarMicrofono(Action:boolean, Status:boolean):void; Operacion utilizada para apagar o prender el microfono.
+operation opManejarMicrofono(Action:boolean, Status:boolean):void; Operación utilizada para apagar o prender el micrófono.
 
-operation opLED(LEDNumber:integer,State:boolean): void; Operacion utilizada para apagar o prender un LED.
+operation opLED(LEDNumber:integer,State:boolean): void; Operación utilizada para apagar o prender un LED.
 
-operation opManejarParlante(Action:boolean, Status:boolean):void; Operacion utilizada para apagar o prender el parlante.
+operation opManejarParlante(Action:boolean, Status:boolean):void; Operación utilizada para apagar o prender el parlante.
 
-operation opInicVectores(modo:integer):void; Operacion utilizada para inicializar los vectores correspondientes al modo elegido.
+operation opInicVectores(modo:integer):void; Operación utilizada para inicializar los vectores de datos correspondientes al modo elegido.
 
 ## **Constantes**
 
@@ -80,13 +80,13 @@ const LED_AMARILLO: integer = 1; Constante que indica el LED amarillo.
 
 const LED_ROJO: integer = 2; Constante que indica el LED rojo.
 
-const ON: boolean = true; Constante que indica que el periferico esta prendido.
+const ON: boolean = true; Constante que indica que el periférico esta prendido.
 
-const OFF: boolean = true; Constante que indica que el periferico esta apagado.
+const OFF: boolean = true; Constante que indica que el periférico esta apagado.
 
-const MICRO_SENAL: boolean = true; Constante usada para identificar el microfono que toma la señal contaminada con ruido.
+const MICRO_SENAL: boolean = true; Constante usada para identificar el micrófono que toma la señal contaminada con ruido.
 
-const MICRO_RUIDO: boolean = true; Constante usada para identificar al microfono que toma la referencia del ruido.
+const MICRO_RUIDO: boolean = true; Constante usada para identificar al micrófono que toma la referencia del ruido.
 
 const PARLANTE: boolean = true; Constante usada para identificar al parlante que reproduce la señal de control.
 
@@ -122,11 +122,13 @@ var viModo: integer; Variable usada para indicar el modo seleccionado.
 
 ## **Implentación en el MCU Express**
 
+
+![Modo de cancelacion](https://user-images.githubusercontent.com/65372063/82596832-64f23180-9b7e-11ea-8a15-f91ee1ad3c69.png)
+
 ![LED Verde](https://user-images.githubusercontent.com/65372063/82596520-ccf44800-9b7d-11ea-9b41-f006491f03fb.png)
 
 ![LED Rojo](https://user-images.githubusercontent.com/65372063/82596711-29effe00-9b7e-11ea-997d-ef927f7510e1.png)
 
 ![LED Amarillo](https://user-images.githubusercontent.com/65372063/82596804-53108e80-9b7e-11ea-8a77-94679370dd1a.png)
 
-![Modo de cancelacion](https://user-images.githubusercontent.com/65372063/82596832-64f23180-9b7e-11ea-8a15-f91ee1ad3c69.png)
 
