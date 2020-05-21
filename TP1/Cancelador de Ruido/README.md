@@ -5,7 +5,7 @@
 
 El presente proyecto consiste en la implementación de un cancelador activo de ruido acústico
 \(también conocido como ANC por sus siglas en inglés)\ .
-Para su implementación se usara una placa EDU-CIAA, 2 micrófonos, un parlante y 2 pulsador para indicar el modo.
+Para su implementación se usara una placa EDU-CIAA, 2 micrófonos, un parlante y 2 pulsadores para indicar el modo y la señal de inicio.
 
 El dispositivo empieza en un estado de reposo en el que se elige el modo de operación deseado /( puede ser Feedback o Feedforward)/.
 De acuerdo al modo elegido, se activarán los micrófonos correspondientes para la recepcion de la señal deseada.
