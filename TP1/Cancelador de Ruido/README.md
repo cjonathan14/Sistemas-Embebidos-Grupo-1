@@ -3,6 +3,9 @@
 
 **Descripción**
 
+El presente proyecto consiste en la implementacion de un cancelador activo de ruido acustico
+\(tambien conocido como ANC por sus siglas en ingles)\ .
+
 **Estados**
 
 INICIO;
