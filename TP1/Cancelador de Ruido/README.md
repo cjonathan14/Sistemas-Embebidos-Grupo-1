@@ -8,39 +8,42 @@ El presente proyecto consiste en la implementacion de un cancelador activo de ru
 
 **Estados**
 
-INICIO;
+INICIO; Estado en el que el dispositivo se inicializa
 
-MODO FEEDBACK;
+MODO FEEDBACK; Estado en el que el sistema inicializa los perifericos correspondientes al modo Feedback
 
-MODO FEEDFORWARD;
+MODO FEEDFORWARD; Estado en el que el sistema inicializa los perifericos correspondientes al modo Feedforward
 
-ANALISIS CAMINO SECUNDARIO;
 
-CONTROL;
+ANALISIS CAMINO SECUNDARIO; Estado en el que se identifica la respuesta impulsiva del sistema mediante generación de ruido blanco
+
+CONTROL; Estado en el que se emite la señal de control de ruido
 
 **Estados LED**
 
-ENCENDIDO;
+ENCENDIDO; El LED se encuentra encendido 
 
-REPOSO;
+REPOSO; El LED se encuentra en reposo
 
-TITILA;
+TITILA; El LED esta titilando
+
+APAGADO; El LED se encuentra apagado
 
 **Eventos**
 
-in event evModoFeedback;
+in event evModoFeedback; Evento en el que se selecciona el modo Feedback
 
-in event evModoFeedForward;
+in event evModoFeedForward; Evento en el que se selecciona el modo Feedforward
 
-in event evOffsetOK;
+in event evOffsetOK; Evento en el que el offset de la señal es nulo
 
-in event evBiasMeasureFAIL;
+in event evBiasMeasureFAIL; Evento en el que el offset de la señal es distinto de cero
 
-in event evStop;
+in event evStop; Evento en el que se envia una señal de stop para dejar de emitir la señal de control
 
-in event evConvergenceOK;
+in event evConvergenceOK; Evento en el que el algoritmo LMS converge de manera exitosa
 
-in event evConvergenceFAIL;
+in event evConvergenceFAIL; Evento en el que el algoritmo LMS no converge de manera exitosa
 
 **Operaciones**
 
