@@ -105,5 +105,6 @@ event apagarLEDRojo; Señal para apagar el LED verde
 
 IMAGEN DE PRUEBA, NO DARLE BOLA
 
-![image info](C:/Users/chris/Desktop/imagen.png)
+![imagen](https://user-images.githubusercontent.com/65372063/82520354-52ceaf80-9afa-11ea-9eea-9773003a05aa.png)
+
 
