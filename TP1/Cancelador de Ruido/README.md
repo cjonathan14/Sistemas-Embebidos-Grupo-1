@@ -122,6 +122,7 @@ var viModo: integer; Variable usada para indicar el modo seleccionado.
 
 ## **Implentación en el MCU Express**
 
+![Cancelador](https://user-images.githubusercontent.com/65372063/82600697-b4d3f700-9b84-11ea-8d5a-b6d25c074683.png)
 
 ![Modo de cancelacion](https://user-images.githubusercontent.com/65372063/82596832-64f23180-9b7e-11ea-8a15-f91ee1ad3c69.png)
 
