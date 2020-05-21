@@ -124,3 +124,9 @@ var viModo: integer; Variable usada para indicar el modo seleccionado.
 
 ![LED Verde](https://user-images.githubusercontent.com/65372063/82596520-ccf44800-9b7d-11ea-9b41-f006491f03fb.png)
 
+![LED Rojo](https://user-images.githubusercontent.com/65372063/82596711-29effe00-9b7e-11ea-997d-ef927f7510e1.png)
+
+![LED Amarillo](https://user-images.githubusercontent.com/65372063/82596804-53108e80-9b7e-11ea-8a77-94679370dd1a.png)
+
+![Modo de cancelacion](https://user-images.githubusercontent.com/65372063/82596832-64f23180-9b7e-11ea-8a15-f91ee1ad3c69.png)
+
