@@ -18,7 +18,7 @@ Luego de ser calculada se prende nuevamente el LED verde y se pasa a la fase de 
 loop infinito en el que la señal de control es continuamente actualizada y se activa el parlante para transmitir
 esta señal y el LED amarillo vuelve a titilar nuevamente. Este loop infinito solo puede ser detenido mediante una señal de Stop implementada con un pulsador, la cual devuelve al dispositivo a su estado
 de reposo, se cesa de transmitir la señal anti-ruido y se prende el LED rojo para indicar que se detuvo el proceso.
-Una vez dentro del reposo, se mantendra el LED rojo prendido hasta que se seleccione nuevamente un modo de funcionamiento.
+Una vez dentro del estado de reposo, se mantendra el LED rojo prendido hasta que se seleccione nuevamente un modo de funcionamiento.
 
 Este documento detalla el funcionamiento de este proyecto, acompañado por imágenes para facilitar su comprensión.
 
