@@ -50,7 +50,7 @@ in event evModo; Evento en el que se selecciona el modo.
 
 in event evOffsetOK; Evento en el que el offset de la señal es nulo.
 
-in event evBiasMeasureFAIL; Evento en el que el offset de la señal es distinto de cero.
+in event evOffsetERROR; Evento en el que el offset de la señal es distinto de cero.
 
 in event evStartStop; Evento en el que se envia una señal de star o de stop para dejar de emitir la señal de control.
 
