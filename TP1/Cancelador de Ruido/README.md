@@ -122,7 +122,5 @@ var viModo: integer; Variable usada para indicar el modo seleccionado.
 
 ## **Implentación en el MCU Express**
 
-IMAGEN DE PRUEBA, NO DARLE BOLA
-
-![image info](C:/Users/chris/Desktop/imagen.png)
+![LED Verde](https://user-images.githubusercontent.com/65372063/82596520-ccf44800-9b7d-11ea-9b41-f006491f03fb.png)
 
