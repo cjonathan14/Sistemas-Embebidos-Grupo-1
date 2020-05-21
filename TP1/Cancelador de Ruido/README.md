@@ -54,9 +54,9 @@ in event evOffsetERROR; Evento en el que el offset de la señal es distinto de c
 
 in event evStartStop; Evento en el que se envia una señal de star o de stop para dejar de emitir la señal de control.
 
-in event evConvergenceOK; Evento en el que el algoritmo LMS converge de manera exitosa.
+in event evIdentificacionOK; Evento en el que el algoritmo LMS converge de manera exitosa.
 
-in event evConvergenceFAIL; Evento en el que el algoritmo LMS no converge de manera exitosa.
+in event evIdentificacionERROR; Evento en el que el algoritmo LMS no converge de manera exitosa.
 
 ## **Operaciones**
 
