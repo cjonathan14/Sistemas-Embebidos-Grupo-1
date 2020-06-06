@@ -1,4 +1,5 @@
 Chip_GPIO_Init(LPC_GPIO_PORT); --> Configuracion inicial de GPIO
+
 Chip_SCU_PinMux(
          pinNamePort,
          pinNamePin,
