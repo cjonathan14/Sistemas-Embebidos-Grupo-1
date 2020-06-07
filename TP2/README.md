@@ -34,3 +34,7 @@ floats to an indeterminate state) if it is temporarily not driven.
 Por hacer:
 
 Sacar los #if, si es necesario
+
+Nota:
+
+La funcion ObtainPin es static, o sea que tiene alcance limitado: solo puede verse en el .c al que pertenece. Eso es para tener como mas "privacidad" para la estructura, ObtainPin es la unica funcion que accede a ella. Ademas, como la funcion es local al .c, no se define en el .h, para que no se vea desde afuera.
