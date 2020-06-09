@@ -8,6 +8,8 @@ A continuación se detallan las pasos a seguir para poder migrar el proyecto **e
 ### **Paso 1**
 
 Generamos una nueva carpeta en el directorio **examples/c** titulada **project**.
+
+
 ![Paso2](https://user-images.githubusercontent.com/65372063/84199417-82c6fe00-aa7b-11ea-8ef4-9320ecd67559.png)
 
 ### **Paso 2**
