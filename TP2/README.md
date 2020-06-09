@@ -8,7 +8,7 @@ La unidad de control del sistema determina la función y el modo eléctrico de l
 
 El esquema general de un pin sontrolado por la SCU se muestra en la figura siguiente
 
-*********** INSERTAR IMAGEN DEL PIN *************************
+![](https://user-images.githubusercontent.com/38143566/84207295-6a5ce080-aa87-11ea-8fff-72878b23c3c6.png)
 
 ### Configuración
 
@@ -33,7 +33,7 @@ Existen otras configuraciones, pero no son fundamentales en esta aplicación.
 
 La SCU cuenta con un registro de 4 bytes por cada pin, llamado SFSP. En los pines normales (normal-drive pins), tiene el siguiente contenido
 
-************** INSERTAR IMAGEN DE REGISTRO ******************
+![](https://user-images.githubusercontent.com/38143566/84207333-8c566300-aa87-11ea-967d-15828a184604.png)
 
 MODE: Permite seleccionar la función del pin.
 
