@@ -1,7 +1,5 @@
 # TP2: Entradas y salidas (digitales) de propósito general (GPIO)
 
-## Migracion
-
 ## System Control Unit (SCU)
 
 La unidad de control del sistema determina la función y el modo eléctrico de la mayoría de los pines digitales. Algunos pines también soportan funciones analógicas y son manejados por la misma unidad.
