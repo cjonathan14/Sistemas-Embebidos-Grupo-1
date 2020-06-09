@@ -3,18 +3,20 @@
 
 ## **Migración**
 A continuación se detallan las pasos a seguir para poder migrar el proyecto **examples/c/app** a **examples/c/project/tp2**.
-![Paso1](https://user-images.githubusercontent.com/65372063/84198875-97ef5d00-aa7a-11ea-8e99-9e8621a6c666.png)
+
 
 ### **Paso 1**
 
 Generamos una nueva carpeta en el directorio **examples/c** titulada **project**.
 
+![Paso1](https://user-images.githubusercontent.com/65372063/84198875-97ef5d00-aa7a-11ea-8e99-9e8621a6c666.png)
 
-![Paso2](https://user-images.githubusercontent.com/65372063/84199417-82c6fe00-aa7b-11ea-8ef4-9320ecd67559.png)
 
 ### **Paso 2**
 
 Copiamos la carpeta **app** a **project** y cambiamos su nombre a **tp2**.
+
+![Paso2](https://user-images.githubusercontent.com/65372063/84199417-82c6fe00-aa7b-11ea-8ef4-9320ecd67559.png)
 
 ### **Paso 3**
 
