@@ -22,6 +22,8 @@ Copiamos la carpeta **app** a **project** y cambiamos su nombre a **tp2**.
 
 Cambiamos el nombre de *app.c* a *tp2.c*.
 
+![Paso3](https://user-images.githubusercontent.com/65372063/84203789-6bd6da80-aa80-11ea-89f7-81a2f5cfb77d.png)
+
 ### **Paso 4**
 
 Para poder compilar el programa modificamos los parametros de *program.mk* a los descriptos en la siguiente figura.
