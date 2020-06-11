@@ -128,9 +128,98 @@ STATIC INLINE bool Chip_GPIO_GetPinState(LPC_GPIO_T *pGPIO, uint8_t port, uint8_
 Lee el valor de **pin** a través del registro **B**.
 
 
-## Documentacion de nuestro codigo (renombrar titulo)
+## Documentacion del código
 
+Se define un tipo enumerativo que contiene todos los posibles GPIOs.
+```
+typedef enum {
+	MY_GPIO_INPUT, MY_GPIO_OUTPUT,
+	MY_GPIO_INPUT_PULLUP, MY_GPIO_INPUT_PULLDOWN,
+	MY_GPIO_INPUT_REPEATER,
+	MY_GPIO_ENABLE
+} my_gpioInit_t;
+```
 
+La siguiente estructura contiene el pin y el puerto del SCU y GPIO que se va a configurar.
+
+```
+typedef struct {
+	int8_t scu_port;
+	int8_t scu_pin;
+	int8_t func;
+	int8_t gpio_port;
+	int8_t gpio_pin;
+} my_conf_t;
+```
+Es un vector que contiene la información de los pines y funciones del SCU y GPIO que se usan para manejar los leds de la placa. Se utiliza una compilación condicional para las distintas placas. En este casi se utiliza la placa edu_ciaa_nxp.
+
+```
+const my_conf_t my_gpio_pinsInit[] = {
+
+   //{ SCUPortN ,SCUNamePinN, PinFUNC, gpioPortN, gpioPinN }
+
+   #if BOARD==edu_ciaa_nxp
+
+      { 2, 0, FUNC4, 5, 0 },   // LEDR    LED0_R
+      { 2, 1, FUNC4, 5, 1 },   // LEDG    LED0_G
+      { 2, 2, FUNC4, 5, 2 },   // LEDB    LED0_B
+      { 2,10, FUNC0, 0,14 },   // LED1    LED1
+      { 2,11, FUNC0, 1,11 },   // LED2    LED2
+      { 2,12, FUNC0, 1,12 },   // LED3    LED3
+	   { 1, 0, FUNC0, 0, 4 },   // TEC1    TEC_1
+      { 1, 1, FUNC0, 0, 8 },   // TEC2    TEC_2
+      { 1, 2, FUNC0, 0, 9 },   // TEC3    TEC_3
+      { 1, 6, FUNC0, 1, 9 },   // TEC4    TEC_4
+	   { 6, 1, FUNC0, 3, 0 },   // CON2_29   GPIO0
+	   { 6, 5, FUNC0, 3, 4 },   // CON2_31   GPIO2
+
+	#elif BOARD==ciaa_nxp
+	   #error CIAA-NXP
+
+    #elif BOARD==ciaa_z3r0
+       #error CIAA-Z3R0
+
+    #elif BOARD==pico_ciaa
+       #error PicoCIAA
+
+   #else
+      #error BOARD compile variable must be defined
+
+   #endif
+
+};
+```
+Mediante esta función se obtienen todos los datos necesarios del pin que se va a configurar. 
+```
+static void my_gpioObtainPinInit( my_gpioMap_t pin,
+                               int8_t *scu_port, int8_t *scu_pin,
+                               int8_t *func, int8_t *gpio_port,
+                               int8_t *gpio_pin )
+```
+
+Esta función recibe como parametros el pin a configurar y su configuración. Si la configuración es invalida retorna FALSE. 
+```
+bool_t my_gpioInit( my_gpioMap_t pin, my_gpioInit_t config )
+```
+
+Esta función se encarga de la configuración del pin SCU recibiendo como parametros el puerto, el pin, su modo de configuración y la función del pin. 
+```
+Chip_SCU_PinMux(
+		 scu_port,
+		 scu_pin,
+		 SCU_MODE_INACT | SCU_MODE_INBUFF_EN | SCU_MODE_ZIF_DIS,
+		 func
+	  );
+```
+
+Aquí se configura el pin del GPIO como salida o entrada. En este caso esta configurado como entrada. Recibe como parametros el registro GPIO , el puerto y el valor del bit.
+```
+Chip_GPIO_SetDir( LPC_GPIO_PORT, gpio_port, ( 1 << gpio_pin ), INPUT_PORT )
+```
+Luego se setea el estado del pin, esta función recibe como parametros el registro GPIO, el puerto, el pin y el nivel lógico.
+```
+Chip_GPIO_SetPinState( LPC_GPIO_PORT, gpio_port, gpio_pin, 0);
+```
 
 # Notas y cosas por hacer
 
