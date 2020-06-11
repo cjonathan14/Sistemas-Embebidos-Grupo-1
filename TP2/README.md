@@ -151,7 +151,7 @@ typedef struct {
 	int8_t gpio_pin;
 } my_conf_t;
 ```
-Es un vector que contiene la información de los pines y funciones del SCU y GPIO que se usan para manejar los leds de la placa. Se utiliza una compilación condicional para las distintas placas. En este casi se utiliza la placa edu_ciaa_nxp.
+Es un vector que contiene la información de los pines y funciones del SCU y GPIO que se usan para manejar los leds de la placa. Se utiliza una compilación condicional para las distintas placas. En este caso se utiliza la placa edu_ciaa_nxp.
 
 ```
 const my_conf_t my_gpio_pinsInit[] = {
@@ -220,24 +220,3 @@ Luego se setea el estado del pin, esta función recibe como parametros el regist
 ```
 Chip_GPIO_SetPinState( LPC_GPIO_PORT, gpio_port, gpio_pin, 0);
 ```
-
-# Notas y cosas por hacer
-
-Chip_GPIO_Init(LPC_GPIO_PORT); --> Configuracion inicial de GPIO
-
-
-Chip_GPIO_SetDir( LPC_GPIO_PORT, gpioPort, ( 1 << gpioPin ), GPIO_INPUT/OUTPUT ); --> Configura el GPIO
-
-Chip_GPIO_SetPinState( LPC_GPIO_PORT, gpioPort, gpioPin, value); --> Escribe en GPIO // Primer argumento: dirección física del puerto. Se usa siempre esa macro
-
-(bool_t) Chip_GPIO_GetPinState( LPC_GPIO_PORT, gpioPort, gpioPin ); --> Lee de GPIO
-
-
-
-Por hacer:
-
-Sacar los #if, si es necesario
-
-Nota:
-
-La funcion ObtainPin es static, o sea que tiene alcance limitado: solo puede verse en el .c al que pertenece. Eso es para tener como mas "privacidad" para la estructura, ObtainPin es la unica funcion que accede a ella. Ademas, como la funcion es local al .c, no se define en el .h, para que no se vea desde afuera.
