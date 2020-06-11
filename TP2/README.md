@@ -46,7 +46,9 @@ EZI: Activar y desactivar el buffer de entrada.
 
 El fabricante del microcontrolador ofrece una biblioteca para el manejo de la SCU: scu_18xx_43xx. Esta bibliteca cuenta con varias funciones, de las cuales solo se usa una en este proyecto:
 
+```
 Chip_SCU_PinMux(uint8_t **port**, uint8_t **pin**, uint16_t **mode**, uint8_t **func**)
+```
 
 Esta función escribe **mode | func** en el registro SFSP correspondiente al pin **port | pin**.
 
@@ -62,6 +64,68 @@ func );
 
 
 ## GPIO
+
+El microcontrolador cuenta con un bloque de entradas y salidas de propósito general (GPIO) que cuenta con sus propios registros. A partir de los registros de GPIO puede configurarse un pin como entrada y salida, leer y escribir valores, y habilitar y configurar interrupciones. La conexión de los pines de GPIO a los pines físicos está controlada por la SCU.
+
+La unidad de GPIO cuenta con 7 puertos, con una cantidad variable de pines de hasta 31. Por cada pin existe un bit de salida, que configurado correctamente se escribirá sobre un pin físico del microcontrolador.
+
+
+### Registros
+
+El registro que se utiliza para configurar un pin como entrada o salida dentro del bloque de GPIO es **DIR**. El microcontrolador cuenta con un registro DIR por cada puerto, cuyo bit **m** configura el pin **m** correspondiente.
+
+![](https://user-images.githubusercontent.com/38143566/84331192-f4787800-ab5f-11ea-827c-acb9f8382d09.png)
+
+Existen numerosos registros para leer y escribir: puede realizarse lectura/escritura de un pin, de un puerto con o sin máscara, entre otras opciones. En este proyecto solo se utiliza el registro **B**. Existe un registro **B** por cada pin de GPIO y puede utilizarse tanto para leer como para escribir.
+
+![](https://user-images.githubusercontent.com/38143566/84331220-065a1b00-ab60-11ea-8e5d-dc8a434db3a6.png)
+
+Como se menciona en la tabla, al leer el registro se obtiene el estado del pin correspondiente; mientras que al escribirlo se carga el valor en el bit de salida.
+
+
+### Leer y escribir
+
+Cada pin cuenta con un bit de salida en el bloque de GPIO, que es escrito por ejemplo al actualizar el registro **B**. Para llevar este bit de salida hasta el pin físico es necesario realizar 2 pasos:
+
+* Configurar en la SCU el pin como GPIO.
+* Seleccionar el pin como salida en el registro DIR de su puerto correspondiente.
+
+Para leer un bit de entrada solo es necesario que se configure el pin como entrada en **DIR** y esté activado el buffer de entrada en el SCU. No es necesario que se seleccione la función GPIO. La lectura de un valor puede hacerse por medio del registro **B**.
+
+
+### Funciones
+
+El fabricante del microcontrolador ofrece una biblioteca para el manejo del módulo de GPIO: **gpio_18xx_43xx**. Esta biblioteca cuenta con varias funciones, de las cuales se utilizan solamente 4:
+
+```
+void Chip_GPIO_Init(LPC_GPIO_T *pGPIO)
+```
+
+Inicializa las GPIO. En un principio no hace nada, pero puede modificarse para establecer una configuración inicial.
+
+```
+STATIC INLINE void Chip_GPIO_SetDir(LPC_GPIO_T *pGPIO, uint8_t portNum, uint32_t bitValue, uint8_t out)
+```
+
+Configura un pin como entrada o salida, es decir, escribe el registro DIR. 
+
+pGPIO es la dirección en la que comienzan los registros de GPIO (0x400F4000). 
+
+El valor de bitValue es una máscara con un 1 en el bit que se desea configurar. Es decir **bitValue = ( 1 << gpio_pin )**.
+
+El valor **out = 1** configura el pin como salida, mientras que **out = 0** corresponde a entrada.
+
+```
+STATIC INLINE void Chip_GPIO_SetPinState(LPC_GPIO_T *pGPIO, uint8_t port, uint8_t pin, bool setting)
+```
+
+Escribe en el bit de salida el valor de **setting** utilizando el registro **B**.
+
+```
+STATIC INLINE bool Chip_GPIO_GetPinState(LPC_GPIO_T *pGPIO, uint8_t port, uint8_t pin)
+```
+
+Lee el valor de **pin** a través del registro **B**.
 
 
 ## Documentacion de nuestro codigo (renombrar titulo)
