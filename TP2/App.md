@@ -86,7 +86,7 @@ typedef struct {
    gpioInitLpc4337_t gpio;
 } pinInitGpioLpc4337_t;
 ```
-Tipo enumerativo donde se describen
+Estructura donde se define el pin junto con su funcion y el GPIO.
 
 ```
 typedef struct {
@@ -94,7 +94,7 @@ typedef struct {
    int8_t pin;
 } gpioInitLpc4337_t;
 ```
-Tipo enumerativo donde se describen
+Estructura donde se define el puerto y el pin del GPIO.
 
 ### **sapi_peripheral_map.h**
 
@@ -141,6 +141,7 @@ typedef enum {
 } gpioMap_t;
 ```
 
+Tipo enumerativo donde se configuran los pines GPIO de acuerdo a la placa que se posee.
 ```
 typedef struct {
    int8_t port;
@@ -148,7 +149,7 @@ typedef struct {
 } pinInitLpc4337_t;
 ```
 
-
+Estructura donde se define el puerto y el pin para un pin del microcontrolador LPC 4337.
 
 
 
