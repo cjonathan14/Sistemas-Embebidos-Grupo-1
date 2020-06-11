@@ -67,7 +67,7 @@ func );
 
 El microcontrolador cuenta con un bloque de entradas y salidas de propósito general (GPIO) que cuenta con sus propios registros. A partir de los registros de GPIO puede configurarse un pin como entrada y salida, leer y escribir valores, y habilitar y configurar interrupciones. La conexión de los pines de GPIO a los pines físicos está controlada por la SCU.
 
-La unidad de GPIO cuenta con 7 puertos, con una cantidad variable de pines de hasta 31. Por cada pin existe un bit de salida, que configurado correctamente se escribirá sobre un pin físico del microcontrolador.
+La unidad de GPIO cuenta con 7 puertos, con una cantidad variable de pines de hasta 31 cada uno. Por cada pin existe un bit de salida, que configurado correctamente se escribirá sobre un pin físico del microcontrolador.
 
 
 ### Registros
