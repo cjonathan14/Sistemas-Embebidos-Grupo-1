@@ -4,12 +4,11 @@
 ## **Secuencia de funciones**
 
 
-boardConfig(); : Esta función se encuentra en el archivo sapi_board.c . Es la encargada de inicializar y setear la placa.
+boardConfig(); : Macro definida en sapi_board.h . Se trata de una macro a función encargada de llamar a  la función boardInit.
 
+void boardInit(void): Esta función se encuentra en el archivo sapi_board.c . Es la encargada de inicializar y setear la placa.
 Esto consiste en inicializar el clock de la placa y setearlo e inicializar y configurar los pines GPIO de entrada y de salida.
  
-	
-	
 
 void delay( tick_t duration_ms );
 
