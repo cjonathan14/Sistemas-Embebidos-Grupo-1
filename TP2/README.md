@@ -220,3 +220,7 @@ Luego se setea el estado del pin, esta función recibe como parametros el regist
 ```
 Chip_GPIO_SetPinState( LPC_GPIO_PORT, gpio_port, gpio_pin, 0);
 ```
+
+## Pruebas
+
+Se realizaron pruebas de todas las funciones de la biblioteca implementada. En el main está implementada una prueba donde se configuran 2 pines del conector 2: uno como entrada y otro como salida. El valor del pin de salida conmuta cada cierto tiempo constante, es leído por el pin de entrada (deben estar unidos externamente por un cable) y escrito en un led. El funcionamiento fue el esperado, se logró que el led titile.
