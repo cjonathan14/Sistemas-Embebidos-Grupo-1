@@ -3,7 +3,7 @@
 
 ## **Secuencia de funciones**
 
-INSERTE IMAGEN DE SECUENCIA
+![secuenciadefunciones](https://user-images.githubusercontent.com/65372063/84417608-45ce4900-abec-11ea-9b65-7c2603ccd6bd.png)
 
 ## **Funciones**
 
