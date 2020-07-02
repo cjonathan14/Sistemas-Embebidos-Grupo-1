@@ -1,6 +1,5 @@
-
-#include "sapi.h"
 #include "my_debounce.h"
+#include "sapi.h"
 
 void myPrintChar(gpioMap_t, ButtonState_t);
 void ErrorPrintChar(void);
