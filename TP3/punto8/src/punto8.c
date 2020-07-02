@@ -9,11 +9,11 @@ int main(void){
    boardConfig();
 
    uartConfig(UART_USB, 115200);
-   uartCallbackSet(UART_USB, UART_RECEIVE, onRx, NULL);
+   uartCallbackSet(UART_USB, UART_RECEIVE, onRxUART_USB, NULL);
    uartInterrupt(UART_USB, true);
 
    uartConfig(UART_232, 115200);
-   uartCallbackSet(UART_232, UART_RECEIVE, onRx232, NULL);
+   uartCallbackSet(UART_232, UART_RECEIVE, onRxUART_232, NULL);
    uartInterrupt(UART_232, true);
    
    while(TRUE) {
