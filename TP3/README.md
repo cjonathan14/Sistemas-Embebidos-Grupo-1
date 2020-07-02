@@ -1,10 +1,10 @@
 ## Punto 1
 
-# Mapeo de ADC y DAC
+## Mapeo de ADC y DAC
 
 ![](https://user-images.githubusercontent.com/38143566/86362758-2a36eb00-bc4c-11ea-82b7-0e396d50787c.png)
 
-# Mapeo de UART's
+## Mapeo de UART's
 
 La EDU-CIAA-NXP tiene accesibles 3 periféricos UART de los 4
 que trae el microcontrolador:
@@ -14,6 +14,8 @@ que trae el microcontrolador:
 * U3 cuyos pines provienen directo del microcontrolador bajo el nombre de RX_232 y TX_232 en el conector P1.
 
 ![](https://user-images.githubusercontent.com/38143566/86362914-65391e80-bc4c-11ea-8708-3550e400e425.png)
+
+# Documentación de funciones SAPI
 
 # uartConfig(UART_USB,115200);
 
