@@ -2,8 +2,12 @@
 #include <string.h>
 
 #define VALUE_ASCII_INT 48
-#define MAX_VALUE_SCALE 1023
-#define DIVISOR 9 
+#define MAX_VALUE_SCALE 1023.0
+#define DIVISOR 9.0
+
+void reverse(char s[]);
+void itoa(int n, char s[]);
+void onRx( void *noUsado );
 
 
 int main(void){
@@ -18,16 +22,12 @@ int main(void){
   adcConfig( ADC_ENABLE ); 
   dacConfig( DAC_ENABLE ); 
 
-  bool_t ledState1 = OFF;
-  uint32_t i = 0;
   static char uartBuff[10];
   uint16_t muestra = 0;
 
   delay_t delay1;
-  delay_t delay2;
 
   delayConfig( &delay1, 500 );
-  delayConfig( &delay2, 200 );
 
    
   while(1) {
@@ -40,14 +40,6 @@ int main(void){
       uartWriteString( UART_USB, ";\r\n" );
     }
 
-    if ( delayRead( &delay2 ) ){
-      ledState1 = !ledState1;
-      gpioWrite( LED1, ledState1 );
-      i++;
-      if( i == 20 )
-        delayWrite( &delay2, 1000 );
-    }
-
   }
 
    
@@ -56,11 +48,11 @@ int main(void){
 
 void onRx( void *noUsado ){
    char c = uartRxRead( UART_USB );
-   double muestra;
+   double muestra = (double)(c-VALUE_ASCII_INT);
 
-   muestra = ((c-VALUE_ASCII_INT)*MAX_VALUE_SCALE)/MAX_VALUE_SCALE;
+   muestra = (muestra*MAX_VALUE_SCALE)/DIVISOR;
 
-   dacWrite( DAC, muestra );
+   dacWrite( DAC, (uint16_t)muestra );
 }
 
 
