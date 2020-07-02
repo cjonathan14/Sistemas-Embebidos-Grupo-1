@@ -13,8 +13,6 @@ int main(void){
   uartConfig( UART_USB, 115200 );
 
   adcConfig( ADC_ENABLE ); /* ADC */
-   
-  bool_t ledState1 = OFF;
 
  
   uint32_t i = 0;
@@ -41,14 +39,6 @@ int main(void){
          
         uartWriteString( UART_USB, uartBuff );
         uartWriteString( UART_USB, ";\r\n" );
-      }
-
-      if ( delayRead( &delay2 ) ){
-        ledState1 = !ledState1;
-        gpioWrite( LED1, ledState1 );
-        i++;
-        if( i == 20 )
-          delayWrite( &delay2, 1000 );
       }
 
    }
